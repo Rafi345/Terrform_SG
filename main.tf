@@ -1,13 +1,3 @@
-terraform {
-  required_version = ">= 1.6.0"
-
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 6.0"
-    }
-  }
-}
 
 resource "aws_security_group" "rafi_sg" {
   name        = "rafi-security-group"
@@ -49,7 +39,7 @@ resource "aws_security_group" "rafi_sg" {
 resource "aws_instance" "my_ec2" {
   ami           = "ami-04ec97dc75ac850b1" 
   instance_type = "t2.micro"
-  key_name      = "Rafi_Sg" 
+  key_name      = "Rolex" 
 
   vpc_security_group_ids = [aws_security_group.rafi_sg.id]
 
