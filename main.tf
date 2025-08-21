@@ -1,3 +1,14 @@
+terraform {
+  required_version = ">= 1.6.0"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
+    }
+  }
+}
+
 resource "aws_security_group" "rafi_sg" {
   name        = "rafi-security-group"
   description = "Allow SSH, HTTP, and custom 8080"
